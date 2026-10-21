@@ -1,30 +1,41 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ztoura <ztoura@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/10/19 16:48:33 by ztoura            #+#    #+#             */
+/*   Updated: 2026/10/21 15:55:21 by ztoura           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-    size_t i;
-    unsigned char *dstbytes;
-    const unsigned char *srcbytes;
+	size_t				i;
+	unsigned char		*dstbytes;
+	const unsigned char	*srcbytes;
 
-    dstbytes = dst;
-    srcbytes = src;
-    i = 0;
-    while(i < n)
-    {
-        dstbytes[i] = srcbytes[i];
-        i++;
-    }
-
-    return (dst);
+	dstbytes = dst;
+	srcbytes = src;
+	i = 0;
+	while (i < n)
+	{
+		dstbytes[i] = srcbytes[i];
+		i++;
+	}
+	return (dst);
 }
 
-int main()
-{
-    unsigned char src[] = {65, 70, 66};
-    unsigned char dst[] = {9, 9, 9};
-    ft_memcpy(dst, src, 3);
-    for(int i = 0; i < 3 ; i++)
-    {
-        printf ("%d,", dst[i]);
-    }
-}
+// int main()
+// {
+// 	unsigned char src[] = {65, 70, 66};
+// 	unsigned char dst[] = {9, 9, 9};
+// 	ft_memcpy(dst, src, 3);
+// 	for(int i = 0; i < 3 ; i++)
+// 	{
+// 		printf ("%d,", dst[i]);
+// 	}
+// }

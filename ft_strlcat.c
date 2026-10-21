@@ -1,32 +1,45 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ztoura <ztoura@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/10/19 16:55:37 by ztoura            #+#    #+#             */
+/*   Updated: 2026/10/19 18:18:03 by ztoura           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+// #include <stdio.h>
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-    size_t dstlenght;
-    size_t srclenght;
-    int i;
-    int rest;
+	size_t	dst_l;
+	size_t	src_l;
+	size_t	i;
 
-    dstlenght = 0;
-    srclenght = 0;
-    i = 0;
-    while (dst[dstlenght] != '\0')
-        dstlenght++;
-    while (src[srclenght] != '\0')
-        srclenght++;
-    rest = dstsize - dstlenght;
-    while(src[i] != '\0' && i < rest - 1)
-    {
-        dst[i + dstlenght] = src[i];
-        i++;
-    }
-    dst[i + dstlenght] = '\0';
-    return (dstlenght + srclenght);
+	i = 0;
+	dst_l = 0;
+	src_l = 0;
+	while (dst_l < dstsize && dst[dst_l] != '\0')
+		dst_l++;
+	while (src[src_l] != '\0')
+		src_l++;
+	if (dst_l < dstsize)
+	{
+		while (src[i] != '\0' && i < dstsize - dst_l - 1)
+		{
+			dst[dst_l + i] = src[i];
+			i++;
+		}
+		dst[dst_l + i] = '\0';
+	}
+	return (dst_l + src_l);
 }
 
-int main()
-{
-    char dst[10] = "hi ";
-    ft_strlcat(dst, "zakaria", sizeof(dst));
-    printf("%s", dst);
-}
+// int main()
+// {
+//     char dst[5] = "hi ";
+//     ft_strlcat(dst, "zakaria", sizeof(dst));
+//     printf("%s", dst);
+// }
