@@ -6,7 +6,7 @@
 /*   By: ztoura <ztoura@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/20 18:21:56 by ztoura            #+#    #+#             */
-/*   Updated: 2026/10/21 14:12:37 by ztoura           ###   ########.fr       */
+/*   Updated: 2026/10/22 14:24:19 by ztoura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (p);
 }
 
-int main()
-{
-	char *p = ft_substr("zakaria", 3, 3);
-	printf("%s", p);
-	free(p);
-}
+// int main()
+// {
+// 	char *p = ft_substr("zakaria", 3, 3);
+// 	printf("%s", p);
+// 	free(p);
+// }

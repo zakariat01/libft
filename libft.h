@@ -6,7 +6,7 @@
 /*   By: ztoura <ztoura@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 19:30:51 by ztoura            #+#    #+#             */
-/*   Updated: 2026/10/20 16:47:02 by ztoura           ###   ########.fr       */
+/*   Updated: 2026/10/22 15:27:34 by ztoura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,14 +33,16 @@ int		ft_isalpha(int c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 //**************************************************
+char	*ft_strdup(const char *s);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
-char	*ft_strdup(const char *s);
+char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 size_t	ft_strlen(const char *s);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
+char	*ft_strjoin(char const *s1, char const *s2);
 //**************************************************
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);
