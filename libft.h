@@ -6,7 +6,7 @@
 /*   By: ztoura <ztoura@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 19:30:51 by ztoura            #+#    #+#             */
-/*   Updated: 2026/10/22 15:27:34 by ztoura           ###   ########.fr       */
+/*   Updated: 2026/10/24 13:02:46 by ztoura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ size_t	ft_strlen(const char *s);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
 //**************************************************
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);
