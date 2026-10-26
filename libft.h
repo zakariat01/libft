@@ -6,7 +6,7 @@
 /*   By: ztoura <ztoura@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 19:30:51 by ztoura            #+#    #+#             */
-/*   Updated: 2026/10/26 12:27:47 by ztoura           ###   ########.fr       */
+/*   Updated: 2026/10/26 18:58:25 by ztoura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 size_t	ft_strlen(const char *s);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
+void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 //**************************************************
 char	*ft_itoa(int n);
 int		ft_atoi(const char *str);

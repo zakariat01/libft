@@ -6,7 +6,7 @@
 /*   By: ztoura <ztoura@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/15 18:30:30 by ztoura            #+#    #+#             */
-/*   Updated: 2026/10/15 19:25:56 by ztoura           ###   ########.fr       */
+/*   Updated: 2026/10/26 19:47:02 by ztoura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,5 @@ int	ft_atoi(const char *str)
 		i++;
 	}
 	number *= sign;
-	return (number); 
+	return (number);
 }

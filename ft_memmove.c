@@ -6,7 +6,7 @@
 /*   By: ztoura <ztoura@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/19 16:52:15 by ztoura            #+#    #+#             */
-/*   Updated: 2026/10/19 16:53:46 by ztoura           ###   ########.fr       */
+/*   Updated: 2026/10/26 19:47:16 by ztoura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 			dstbytes[i] = srcbytes[i];
 		}
 	}
-	else 
+	else
 	{
 		i = 0;
 		while (i < n)
