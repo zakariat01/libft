@@ -1,9 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ztoura <ztoura@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/10/26 11:52:43 by ztoura            #+#    #+#             */
+/*   Updated: 2026/10/26 12:17:04 by ztoura           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 static size_t	count_words(char const *s, char c)
 {
-	int i;
-	int count_words;
+	int	i;
+	int	count_words;
 
 	i = 0;
 	count_words = 0;
@@ -11,7 +23,7 @@ static size_t	count_words(char const *s, char c)
 	{
 		while (s[i] != '\0' && s[i] == c)
 			i++;
-		if(s[i] != '\0' && s[i] != c)
+		if (s[i] != '\0' && s[i] != c)
 			count_words++;
 		while (s[i] != '\0' && s[i] != c)
 			i++;
@@ -19,22 +31,27 @@ static size_t	count_words(char const *s, char c)
 	return (count_words);
 }
 
-char	**ft_split(char const *s, char c)
+static char	**free_words(char **words, size_t i)
 {
-	char **words;
-	size_t i;
-	int j;
-	int start;
-	int end;
-	size_t n_words;
+	while (i > 0)
+	{
+		i--;
+		free(words[i]);
+	}
+	free(words);
+	return (NULL);
+}
 
-	n_words = count_words(s, c);
+static char	**fill_words(char **words, char const *s, char c, size_t n_words)
+{
+	size_t	i;
+	int		j;
+	int		start;
+	int		end;
+
 	i = 0;
 	j = 0;
-	words = malloc((n_words + 1) * sizeof(char *) );
-	if (words == NULL)
-		return (NULL);
-	while (i < n_words - 1)
+	while (i < n_words)
 	{
 		while (s[j] != '\0' && s[j] == c)
 			j++;
@@ -44,17 +61,37 @@ char	**ft_split(char const *s, char c)
 		end = j;
 		words[i] = ft_substr(s, start, end - start);
 		if (words[i] == NULL)
-			return (NULL);
+			return (free_words(words, i));
 		i++;
 	}
 	words[n_words] = NULL;
 	return (words);
 }
 
-int main()
+char	**ft_split(char const *s, char c)
 {
-	char **p = ft_split(",,hello,,zaka", ',');
-	if (p == NULL)
-	 return (0);
-	printf ("%s", p[2]);
+	char	**words;
+	size_t	n_words;
+
+	n_words = count_words(s, c);
+	words = malloc((n_words + 1) * sizeof(char *));
+	if (words == NULL)
+		return (NULL);
+	return (fill_words(words, s, c, n_words));
 }
+
+// int main()
+// {
+// 	char c = ',';
+// 	char *s = ",,hello,,zaka,,ria ";
+// 	char **p = ft_split(s, c);
+// 	int n_words = count_words(s, c);
+// 	if (p == NULL)
+// 	 return (0);
+// 	for (int i = 0; i < n_words; i++)
+// 	{
+// 		printf("%s	", p[i]);
+// 		free(p[i]);
+// 	}
+// 	free(p);
+// }
