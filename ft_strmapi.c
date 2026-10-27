@@ -1,26 +1,39 @@
 #include "libft.h"
 
-char	to_upper(unsigned int i, char c)
-{
-	(void) i;
-	return(ft_toupper(c));
-}
+// char	to_upper(unsigned int i, char c)
+// {
+// 	(void) i;
+// 	return(ft_toupper(c));
+// }
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char *p;
-	int i;
+	char	*p;
+	size_t	i;
+	size_t	len;
 
+	len = ft_strlen(s);
 	i = 0;
-	p = malloc((ft_strlen(s) + 1) * sizeof(char));
+	p = malloc((len + 1) * sizeof(char));
 	if (p == NULL)
 		return (NULL);
-	while ()
+	while (i < len)
 	{
-		
+		p[i] = f(i, s[i]);
+		i++;
 	}
+	p[i] = '\0';
+	return (p);
 }
-int main()
-{
 
-}
+// int main()
+// {
+// 	char s[] = "zakaria";
+// 	char *c;
+
+// 	c = ft_strmapi(s, to_upper);
+// 	if (c == NULL)
+// 		return (1);
+// 	printf ("%s", c);
+// 	free (c);
+// }
