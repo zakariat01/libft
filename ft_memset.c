@@ -6,12 +6,12 @@
 /*   By: ztoura <ztoura@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/19 16:54:17 by ztoura            #+#    #+#             */
-/*   Updated: 2026/10/19 16:55:18 by ztoura           ###   ########.fr       */
+/*   Updated: 2026/10/30 17:42:28 by ztoura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stddef.h>
-// #include <stdio.h>
+#include "libft.h"
+
 void	*ft_memset(void *s, int c, size_t n)
 {
 	size_t			i;

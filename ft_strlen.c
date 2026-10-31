@@ -6,11 +6,11 @@
 /*   By: ztoura <ztoura@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 18:25:37 by ztoura            #+#    #+#             */
-/*   Updated: 2026/10/13 18:45:22 by ztoura           ###   ########.fr       */
+/*   Updated: 2026/10/31 22:01:54 by ztoura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {
@@ -23,3 +23,4 @@ size_t	ft_strlen(const char *s)
 	}
 	return (i);
 }
+

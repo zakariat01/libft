@@ -6,11 +6,11 @@
 /*   By: ztoura <ztoura@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/15 14:43:35 by ztoura            #+#    #+#             */
-/*   Updated: 2026/10/20 14:07:42 by ztoura           ###   ########.fr       */
+/*   Updated: 2026/10/31 22:01:40 by ztoura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {

@@ -6,9 +6,11 @@
 /*   By: ztoura <ztoura@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/15 16:22:08 by ztoura            #+#    #+#             */
-/*   Updated: 2026/10/15 17:09:44 by ztoura           ###   ########.fr       */
+/*   Updated: 2026/10/31 22:00:36 by ztoura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {

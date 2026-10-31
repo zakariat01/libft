@@ -6,7 +6,7 @@
 /*   By: ztoura <ztoura@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/27 21:45:39 by ztoura            #+#    #+#             */
-/*   Updated: 2026/10/28 19:06:05 by ztoura           ###   ########.fr       */
+/*   Updated: 2026/10/30 00:23:43 by ztoura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,12 @@ unsigned int	ft_lstsize(t_list *lst)
 
 	if (!lst)
 		return (0);
-	cnt = 1;
-	p = lst->next;
+	p = lst;
+	cnt = 0;
 	while (p != NULL)
 	{
-		p = p->next;
 		cnt++;
+		p = p->next;
 	}
 	return (cnt);
 }
