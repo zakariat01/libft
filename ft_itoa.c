@@ -6,13 +6,13 @@
 /*   By: ztoura <ztoura@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/24 14:24:52 by ztoura            #+#    #+#             */
-/*   Updated: 2026/10/26 17:58:28 by ztoura           ###   ########.fr       */
+/*   Updated: 2026/11/02 00:11:28 by ztoura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	count_digit(int n)
+static int	count_digit(int n)
 {
 	int		count;
 	long	ln;

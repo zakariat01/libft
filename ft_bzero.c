@@ -6,7 +6,7 @@
 /*   By: ztoura <ztoura@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/19 13:32:53 by ztoura            #+#    #+#             */
-/*   Updated: 2026/10/20 16:24:11 by ztoura           ###   ########.fr       */
+/*   Updated: 2026/11/01 17:16:12 by ztoura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,6 @@ void	ft_bzero(void *s, size_t n)
 // int main()
 // {
 // 	char str[] = "zakaria";
-// 	ft_bzero(str, 3);
-// 	printf("%s", str + 2);
+// 	ft_bzero(str, 1);
+// 	printf("%s", str + 1);
 // }

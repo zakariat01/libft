@@ -6,7 +6,7 @@
 /*   By: ztoura <ztoura@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 19:30:51 by ztoura            #+#    #+#             */
-/*   Updated: 2026/10/31 21:59:57 by ztoura           ###   ########.fr       */
+/*   Updated: 2026/11/02 00:24:38 by ztoura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <stdint.h>
+# include <stdio.h>
 //**************************************************
 typedef struct s_list
 {
@@ -26,6 +27,8 @@ typedef struct s_list
 
 t_list			*ft_lstnew(void *content);
 t_list			*ft_lstlast(t_list *lst);
+t_list			*ft_lstmap(t_list *lst,
+					void *(*f)(void *), void (*del)(void *));
 unsigned int	ft_lstsize(t_list *lst);
 void			ft_lstdelone(t_list *lst, void (*del)(void *));
 void			ft_lstclear(t_list **lst, void (*del)(void *));
@@ -60,6 +63,7 @@ size_t			ft_strlen(const char *s);
 size_t			ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t			ft_strlcat(char *dst, const char *src, size_t dstsize);
 void			ft_striteri(char *s, void (*f)(unsigned int, char *));
+char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 //**************************************************
 char			*ft_itoa(int n);
 int				ft_atoi(const char *str);
